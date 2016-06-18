@@ -1,0 +1,978 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AgentieImobiliaraModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agenti">
+          <Key>
+            <PropertyRef Name="agentID" />
+          </Key>
+          <Property Name="agentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="orasID" Type="int" Nullable="false" />
+          <Property Name="departamentID" Type="int" Nullable="false" />
+          <Property Name="persoanaID" Type="int" Nullable="false" />
+          <Property Name="functieID" Type="int" Nullable="false" />
+          <Property Name="agentieID" Type="int" Nullable="false" />
+          <Property Name="nume_agent" Type="varchar" MaxLength="30" />
+          <Property Name="telefon_agent" Type="varchar" MaxLength="30" />
+          <Property Name="telefon_edil" Type="varchar" MaxLength="30" />
+          <Property Name="email_agent" Type="varchar" MaxLength="30" />
+          <Property Name="descriere_agent" Type="varchar" MaxLength="50" />
+          <Property Name="link_facebook" Type="varchar" MaxLength="250" />
+          <Property Name="data_angaj" Type="nchar" MaxLength="10" />
+          <Property Name="sex" Type="nchar" MaxLength="10" />
+          <Property Name="CNP" Type="nchar" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="Agentie">
+          <Key>
+            <PropertyRef Name="agentieId" />
+          </Key>
+          <Property Name="agentieId" Type="int" Nullable="false" />
+          <Property Name="numeAgentie" Type="nchar" MaxLength="50" />
+          <Property Name="descriere" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Cartier">
+          <Key>
+            <PropertyRef Name="id_cartier" />
+          </Key>
+          <Property Name="id_cartier" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="denumire_cartier" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="latitudine_longitudine" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="zoom" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cereri">
+          <Key>
+            <PropertyRef Name="id_cerere" />
+          </Key>
+          <Property Name="id_cerere" Type="int" Nullable="false" />
+          <Property Name="id_oferta" Type="int" Nullable="false" />
+          <Property Name="id_client" Type="int" Nullable="false" />
+          <Property Name="nr_camere" Type="int" />
+          <Property Name="zona" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DetaliiImobil">
+          <Key>
+            <PropertyRef Name="detaliiID" />
+          </Key>
+          <Property Name="detaliiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ofertaID" Type="int" Nullable="false" />
+          <Property Name="detalii_suplimentare_ro" Type="text" Nullable="false" />
+          <Property Name="detalii_suplimentare_en" Type="text" Nullable="false" />
+          <Property Name="detalii_suplimentare_fr" Type="text" Nullable="false" />
+          <Property Name="detalii_finale_ro" Type="text" Nullable="false" />
+          <Property Name="detalii_finale_en" Type="text" Nullable="false" />
+          <Property Name="detalii_finale_fr" Type="text" Nullable="false" />
+          <Property Name="publica" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FotoImobil">
+          <Key>
+            <PropertyRef Name="fotoID" />
+          </Key>
+          <Property Name="fotoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumeFoto" Type="nvarchar" MaxLength="256" />
+          <Property Name="DescriereFoto" Type="nvarchar" MaxLength="256" />
+          <Property Name="ofertaID" Type="int" Nullable="false" />
+          <Property Name="img" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Imobil">
+          <Key>
+            <PropertyRef Name="id_imobil" />
+          </Key>
+          <Property Name="id_imobil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="denumire_imobil" Type="varchar(max)" Nullable="false" />
+          <Property Name="comentariu" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Localitate">
+          <Key>
+            <PropertyRef Name="localitateID" />
+          </Key>
+          <Property Name="localitateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="denumire_localitate" Type="varchar(max)" Nullable="false" />
+          <Property Name="longitudine" Type="varchar(max)" />
+          <Property Name="latitudine" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Oferta">
+          <Key>
+            <PropertyRef Name="id_oferta" />
+          </Key>
+          <Property Name="id_oferta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_localitate" Type="int" Nullable="false" />
+          <Property Name="id_cartier" Type="int" Nullable="false" />
+          <Property Name="id_agent" Type="int" Nullable="false" />
+          <Property Name="id_imobil" Type="int" Nullable="false" />
+          <Property Name="tip_contact" Type="varchar(max)" Nullable="false" />
+          <Property Name="nr_camere" Type="int" Nullable="false" />
+          <Property Name="suprafata_utila" Type="int" Nullable="false" />
+          <Property Name="pret" Type="int" Nullable="false" />
+          <Property Name="moneda" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="compartimentare" Type="varchar(max)" Nullable="false" />
+          <Property Name="confort" Type="varchar(max)" Nullable="false" />
+          <Property Name="etaj" Type="varchar(max)" Nullable="false" />
+          <Property Name="nr_bucatarii" Type="int" Nullable="false" />
+          <Property Name="nr_bai" Type="int" Nullable="false" />
+          <Property Name="nr_balcoane" Type="int" Nullable="false" />
+          <Property Name="an_constructie" Type="varchar(max)" Nullable="false" />
+          <Property Name="loc_parcare" Type="varchar(max)" Nullable="false" />
+          <Property Name="utilitati_gen" Type="varchar(max)" Nullable="false" />
+          <Property Name="sistem_incalzire" Type="varchar(max)" Nullable="false" />
+          <Property Name="climatizare" Type="varchar(max)" Nullable="false" />
+          <Property Name="internet" Type="varchar(max)" Nullable="false" />
+          <Property Name="stare_interior" Type="varchar(max)" Nullable="false" />
+          <Property Name="ferestre" Type="varchar(max)" Nullable="false" />
+          <Property Name="podele" Type="varchar(max)" Nullable="false" />
+          <Property Name="usa_intrare" Type="varchar(max)" Nullable="false" />
+          <Property Name="mobilat" Type="varchar(max)" Nullable="false" />
+          <Property Name="latitudine" Type="float" />
+          <Property Name="longitudine" Type="float" />
+        </EntityType>
+        <EntityType Name="Persons">
+          <Key>
+            <PropertyRef Name="personID" />
+          </Key>
+          <Property Name="personID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="telefon" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nume" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="prenume" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="adresa" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="varsta" Type="int" Nullable="false" />
+          <Property Name="data_nasterii" Type="date" />
+          <Property Name="cnp" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tokens">
+          <Key>
+            <PropertyRef Name="tokenId" />
+          </Key>
+          <Property Name="tokenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="authToken" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="issuedOn" Type="datetime" Nullable="false" />
+          <Property Name="expiresOn" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserInRole">
+          <Key>
+            <PropertyRef Name="PersonId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="PersonId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRol">
+          <Key>
+            <PropertyRef Name="RolId" />
+          </Key>
+          <Property Name="RolId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RolName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Descriere" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="VideoImobil">
+          <Key>
+            <PropertyRef Name="videoID" />
+          </Key>
+          <Property Name="videoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ofertaID" Type="int" Nullable="false" />
+          <Property Name="VideoName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="VideoDescription" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <Association Name="FK_Agenti_Agentie">
+          <End Role="Agentie" Type="Self.Agentie" Multiplicity="1" />
+          <End Role="Agenti" Type="Self.Agenti" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agentie">
+              <PropertyRef Name="agentieId" />
+            </Principal>
+            <Dependent Role="Agenti">
+              <PropertyRef Name="agentieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Agenti_Persons">
+          <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+          <End Role="Agenti" Type="Self.Agenti" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persons">
+              <PropertyRef Name="personID" />
+            </Principal>
+            <Dependent Role="Agenti">
+              <PropertyRef Name="persoanaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetaliiImobil_Oferta">
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="1" />
+          <End Role="DetaliiImobil" Type="Self.DetaliiImobil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oferta">
+              <PropertyRef Name="id_oferta" />
+            </Principal>
+            <Dependent Role="DetaliiImobil">
+              <PropertyRef Name="ofertaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FotoImobil_Oferta">
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="1" />
+          <End Role="FotoImobil" Type="Self.FotoImobil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oferta">
+              <PropertyRef Name="id_oferta" />
+            </Principal>
+            <Dependent Role="FotoImobil">
+              <PropertyRef Name="ofertaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oferta_Agent">
+          <End Role="Agenti" Type="Self.Agenti" Multiplicity="1" />
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agenti">
+              <PropertyRef Name="agentID" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="id_agent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oferta_Cartier">
+          <End Role="Cartier" Type="Self.Cartier" Multiplicity="1" />
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cartier">
+              <PropertyRef Name="id_cartier" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="id_cartier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oferta_Imobil">
+          <End Role="Imobil" Type="Self.Imobil" Multiplicity="1" />
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Imobil">
+              <PropertyRef Name="id_imobil" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="id_imobil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oferta_Localitate">
+          <End Role="Localitate" Type="Self.Localitate" Multiplicity="1" />
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localitate">
+              <PropertyRef Name="localitateID" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="id_localitate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tokens_Person">
+          <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+          <End Role="Tokens" Type="Self.Tokens" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persons">
+              <PropertyRef Name="personID" />
+            </Principal>
+            <Dependent Role="Tokens">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInRole_Persons">
+          <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+          <End Role="UserInRole" Type="Self.UserInRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persons">
+              <PropertyRef Name="personID" />
+            </Principal>
+            <Dependent Role="UserInRole">
+              <PropertyRef Name="PersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInRole_UserRol">
+          <End Role="UserRol" Type="Self.UserRol" Multiplicity="1" />
+          <End Role="UserInRole" Type="Self.UserInRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRol">
+              <PropertyRef Name="RolId" />
+            </Principal>
+            <Dependent Role="UserInRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VideoImobil_Oferta">
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="1" />
+          <End Role="VideoImobil" Type="Self.VideoImobil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oferta">
+              <PropertyRef Name="id_oferta" />
+            </Principal>
+            <Dependent Role="VideoImobil">
+              <PropertyRef Name="ofertaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AgentieImobiliaraModelStoreContainer">
+          <EntitySet Name="Agenti" EntityType="Self.Agenti" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Agentie" EntityType="Self.Agentie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cartier" EntityType="Self.Cartier" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cereri" EntityType="Self.Cereri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DetaliiImobil" EntityType="Self.DetaliiImobil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FotoImobil" EntityType="Self.FotoImobil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Imobil" EntityType="Self.Imobil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Localitate" EntityType="Self.Localitate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Oferta" EntityType="Self.Oferta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tokens" EntityType="Self.Tokens" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInRole" EntityType="Self.UserInRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRol" EntityType="Self.UserRol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VideoImobil" EntityType="Self.VideoImobil" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Agenti_Agentie" Association="Self.FK_Agenti_Agentie">
+            <End Role="Agentie" EntitySet="Agentie" />
+            <End Role="Agenti" EntitySet="Agenti" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Agenti_Persons" Association="Self.FK_Agenti_Persons">
+            <End Role="Persons" EntitySet="Persons" />
+            <End Role="Agenti" EntitySet="Agenti" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetaliiImobil_Oferta" Association="Self.FK_DetaliiImobil_Oferta">
+            <End Role="Oferta" EntitySet="Oferta" />
+            <End Role="DetaliiImobil" EntitySet="DetaliiImobil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FotoImobil_Oferta" Association="Self.FK_FotoImobil_Oferta">
+            <End Role="Oferta" EntitySet="Oferta" />
+            <End Role="FotoImobil" EntitySet="FotoImobil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oferta_Agent" Association="Self.FK_Oferta_Agent">
+            <End Role="Agenti" EntitySet="Agenti" />
+            <End Role="Oferta" EntitySet="Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oferta_Cartier" Association="Self.FK_Oferta_Cartier">
+            <End Role="Cartier" EntitySet="Cartier" />
+            <End Role="Oferta" EntitySet="Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oferta_Imobil" Association="Self.FK_Oferta_Imobil">
+            <End Role="Imobil" EntitySet="Imobil" />
+            <End Role="Oferta" EntitySet="Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oferta_Localitate" Association="Self.FK_Oferta_Localitate">
+            <End Role="Localitate" EntitySet="Localitate" />
+            <End Role="Oferta" EntitySet="Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tokens_Person" Association="Self.FK_Tokens_Person">
+            <End Role="Persons" EntitySet="Persons" />
+            <End Role="Tokens" EntitySet="Tokens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInRole_Persons" Association="Self.FK_UserInRole_Persons">
+            <End Role="Persons" EntitySet="Persons" />
+            <End Role="UserInRole" EntitySet="UserInRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInRole_UserRol" Association="Self.FK_UserInRole_UserRol">
+            <End Role="UserRol" EntitySet="UserRol" />
+            <End Role="UserInRole" EntitySet="UserInRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VideoImobil_Oferta" Association="Self.FK_VideoImobil_Oferta">
+            <End Role="Oferta" EntitySet="Oferta" />
+            <End Role="VideoImobil" EntitySet="VideoImobil" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AgentieImobiliaraModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AgentieImobiliaraEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agentis" EntityType="AgentieImobiliaraModel.Agenti" />
+          <EntitySet Name="Agenties" EntityType="AgentieImobiliaraModel.Agentie" />
+          <EntitySet Name="Cartiers" EntityType="AgentieImobiliaraModel.Cartier" />
+          <EntitySet Name="Cereris" EntityType="AgentieImobiliaraModel.Cereri" />
+          <EntitySet Name="DetaliiImobils" EntityType="AgentieImobiliaraModel.DetaliiImobil" />
+          <EntitySet Name="FotoImobils" EntityType="AgentieImobiliaraModel.FotoImobil" />
+          <EntitySet Name="Imobils" EntityType="AgentieImobiliaraModel.Imobil" />
+          <EntitySet Name="Localitates" EntityType="AgentieImobiliaraModel.Localitate" />
+          <EntitySet Name="Ofertas" EntityType="AgentieImobiliaraModel.Oferta" />
+          <EntitySet Name="Persons" EntityType="AgentieImobiliaraModel.Person" />
+          <EntitySet Name="Tokens" EntityType="AgentieImobiliaraModel.Token" />
+          <EntitySet Name="UserRols" EntityType="AgentieImobiliaraModel.UserRol" />
+          <EntitySet Name="VideoImobils" EntityType="AgentieImobiliaraModel.VideoImobil" />
+          <AssociationSet Name="FK_Agenti_Agentie" Association="AgentieImobiliaraModel.FK_Agenti_Agentie">
+            <End Role="Agentie" EntitySet="Agenties" />
+            <End Role="Agenti" EntitySet="Agentis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Agenti_Persons" Association="AgentieImobiliaraModel.FK_Agenti_Persons">
+            <End Role="Person" EntitySet="Persons" />
+            <End Role="Agenti" EntitySet="Agentis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oferta_Agent" Association="AgentieImobiliaraModel.FK_Oferta_Agent">
+            <End Role="Agenti" EntitySet="Agentis" />
+            <End Role="Oferta" EntitySet="Ofertas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oferta_Cartier" Association="AgentieImobiliaraModel.FK_Oferta_Cartier">
+            <End Role="Cartier" EntitySet="Cartiers" />
+            <End Role="Oferta" EntitySet="Ofertas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetaliiImobil_Oferta" Association="AgentieImobiliaraModel.FK_DetaliiImobil_Oferta">
+            <End Role="Oferta" EntitySet="Ofertas" />
+            <End Role="DetaliiImobil" EntitySet="DetaliiImobils" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FotoImobil_Oferta" Association="AgentieImobiliaraModel.FK_FotoImobil_Oferta">
+            <End Role="Oferta" EntitySet="Ofertas" />
+            <End Role="FotoImobil" EntitySet="FotoImobils" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oferta_Imobil" Association="AgentieImobiliaraModel.FK_Oferta_Imobil">
+            <End Role="Imobil" EntitySet="Imobils" />
+            <End Role="Oferta" EntitySet="Ofertas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oferta_Localitate" Association="AgentieImobiliaraModel.FK_Oferta_Localitate">
+            <End Role="Localitate" EntitySet="Localitates" />
+            <End Role="Oferta" EntitySet="Ofertas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VideoImobil_Oferta" Association="AgentieImobiliaraModel.FK_VideoImobil_Oferta">
+            <End Role="Oferta" EntitySet="Ofertas" />
+            <End Role="VideoImobil" EntitySet="VideoImobils" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tokens_Person" Association="AgentieImobiliaraModel.FK_Tokens_Person">
+            <End Role="Person" EntitySet="Persons" />
+            <End Role="Token" EntitySet="Tokens" />
+          </AssociationSet>
+          <AssociationSet Name="UserInRole" Association="AgentieImobiliaraModel.UserInRole">
+            <End Role="Person" EntitySet="Persons" />
+            <End Role="UserRol" EntitySet="UserRols" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Agenti">
+          <Key>
+            <PropertyRef Name="agentID" />
+          </Key>
+          <Property Name="agentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orasID" Type="Int32" Nullable="false" />
+          <Property Name="departamentID" Type="Int32" Nullable="false" />
+          <Property Name="persoanaID" Type="Int32" Nullable="false" />
+          <Property Name="functieID" Type="Int32" Nullable="false" />
+          <Property Name="agentieID" Type="Int32" Nullable="false" />
+          <Property Name="nume_agent" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="telefon_agent" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="telefon_edil" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="email_agent" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="descriere_agent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="link_facebook" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="data_angaj" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="sex" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CNP" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Agentie" Relationship="AgentieImobiliaraModel.FK_Agenti_Agentie" FromRole="Agenti" ToRole="Agentie" />
+          <NavigationProperty Name="Person" Relationship="AgentieImobiliaraModel.FK_Agenti_Persons" FromRole="Agenti" ToRole="Person" />
+          <NavigationProperty Name="Ofertas" Relationship="AgentieImobiliaraModel.FK_Oferta_Agent" FromRole="Agenti" ToRole="Oferta" />
+        </EntityType>
+        <EntityType Name="Agentie">
+          <Key>
+            <PropertyRef Name="agentieId" />
+          </Key>
+          <Property Name="agentieId" Type="Int32" Nullable="false" />
+          <Property Name="numeAgentie" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="descriere" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Agentis" Relationship="AgentieImobiliaraModel.FK_Agenti_Agentie" FromRole="Agentie" ToRole="Agenti" />
+        </EntityType>
+        <EntityType Name="Cartier">
+          <Key>
+            <PropertyRef Name="id_cartier" />
+          </Key>
+          <Property Name="id_cartier" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="denumire_cartier" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="latitudine_longitudine" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="zoom" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ofertas" Relationship="AgentieImobiliaraModel.FK_Oferta_Cartier" FromRole="Cartier" ToRole="Oferta" />
+        </EntityType>
+        <EntityType Name="Cereri">
+          <Key>
+            <PropertyRef Name="id_cerere" />
+          </Key>
+          <Property Name="id_cerere" Type="Int32" Nullable="false" />
+          <Property Name="id_oferta" Type="Int32" Nullable="false" />
+          <Property Name="id_client" Type="Int32" Nullable="false" />
+          <Property Name="nr_camere" Type="Int32" />
+          <Property Name="zona" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DetaliiImobil">
+          <Key>
+            <PropertyRef Name="detaliiID" />
+          </Key>
+          <Property Name="detaliiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ofertaID" Type="Int32" Nullable="false" />
+          <Property Name="detalii_suplimentare_ro" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="detalii_suplimentare_en" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="detalii_suplimentare_fr" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="detalii_finale_ro" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="detalii_finale_en" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="detalii_finale_fr" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="publica" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Oferta" Relationship="AgentieImobiliaraModel.FK_DetaliiImobil_Oferta" FromRole="DetaliiImobil" ToRole="Oferta" />
+        </EntityType>
+        <EntityType Name="FotoImobil">
+          <Key>
+            <PropertyRef Name="fotoID" />
+          </Key>
+          <Property Name="fotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumeFoto" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="DescriereFoto" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="ofertaID" Type="Int32" Nullable="false" />
+          <Property Name="img" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Oferta" Relationship="AgentieImobiliaraModel.FK_FotoImobil_Oferta" FromRole="FotoImobil" ToRole="Oferta" />
+        </EntityType>
+        <EntityType Name="Imobil">
+          <Key>
+            <PropertyRef Name="id_imobil" />
+          </Key>
+          <Property Name="id_imobil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="denumire_imobil" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="comentariu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ofertas" Relationship="AgentieImobiliaraModel.FK_Oferta_Imobil" FromRole="Imobil" ToRole="Oferta" />
+        </EntityType>
+        <EntityType Name="Localitate">
+          <Key>
+            <PropertyRef Name="localitateID" />
+          </Key>
+          <Property Name="localitateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="denumire_localitate" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="longitudine" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="latitudine" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ofertas" Relationship="AgentieImobiliaraModel.FK_Oferta_Localitate" FromRole="Localitate" ToRole="Oferta" />
+        </EntityType>
+        <EntityType Name="Oferta">
+          <Key>
+            <PropertyRef Name="id_oferta" />
+          </Key>
+          <Property Name="id_oferta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_localitate" Type="Int32" Nullable="false" />
+          <Property Name="id_cartier" Type="Int32" Nullable="false" />
+          <Property Name="id_agent" Type="Int32" Nullable="false" />
+          <Property Name="id_imobil" Type="Int32" Nullable="false" />
+          <Property Name="tip_contact" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="nr_camere" Type="Int32" Nullable="false" />
+          <Property Name="suprafata_utila" Type="Int32" Nullable="false" />
+          <Property Name="pret" Type="Int32" Nullable="false" />
+          <Property Name="moneda" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="compartimentare" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="confort" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="etaj" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="nr_bucatarii" Type="Int32" Nullable="false" />
+          <Property Name="nr_bai" Type="Int32" Nullable="false" />
+          <Property Name="nr_balcoane" Type="Int32" Nullable="false" />
+          <Property Name="an_constructie" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="loc_parcare" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="utilitati_gen" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sistem_incalzire" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="climatizare" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="internet" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="stare_interior" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ferestre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="podele" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="usa_intrare" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="mobilat" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="latitudine" Type="Double" />
+          <Property Name="longitudine" Type="Double" />
+          <NavigationProperty Name="Agenti" Relationship="AgentieImobiliaraModel.FK_Oferta_Agent" FromRole="Oferta" ToRole="Agenti" />
+          <NavigationProperty Name="Cartier" Relationship="AgentieImobiliaraModel.FK_Oferta_Cartier" FromRole="Oferta" ToRole="Cartier" />
+          <NavigationProperty Name="DetaliiImobils" Relationship="AgentieImobiliaraModel.FK_DetaliiImobil_Oferta" FromRole="Oferta" ToRole="DetaliiImobil" />
+          <NavigationProperty Name="FotoImobils" Relationship="AgentieImobiliaraModel.FK_FotoImobil_Oferta" FromRole="Oferta" ToRole="FotoImobil" />
+          <NavigationProperty Name="Imobil" Relationship="AgentieImobiliaraModel.FK_Oferta_Imobil" FromRole="Oferta" ToRole="Imobil" />
+          <NavigationProperty Name="Localitate" Relationship="AgentieImobiliaraModel.FK_Oferta_Localitate" FromRole="Oferta" ToRole="Localitate" />
+          <NavigationProperty Name="VideoImobils" Relationship="AgentieImobiliaraModel.FK_VideoImobil_Oferta" FromRole="Oferta" ToRole="VideoImobil" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="personID" />
+          </Key>
+          <Property Name="personID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="telefon" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="prenume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="adresa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="varsta" Type="Int32" Nullable="false" />
+          <Property Name="data_nasterii" Type="DateTime" Precision="0" />
+          <Property Name="cnp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Agentis" Relationship="AgentieImobiliaraModel.FK_Agenti_Persons" FromRole="Person" ToRole="Agenti" />
+          <NavigationProperty Name="Tokens" Relationship="AgentieImobiliaraModel.FK_Tokens_Person" FromRole="Person" ToRole="Token" />
+          <NavigationProperty Name="UserRols" Relationship="AgentieImobiliaraModel.UserInRole" FromRole="Person" ToRole="UserRol" />
+        </EntityType>
+        <EntityType Name="Token">
+          <Key>
+            <PropertyRef Name="tokenId" />
+          </Key>
+          <Property Name="tokenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userId" Type="Int32" Nullable="false" />
+          <Property Name="authToken" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="issuedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="expiresOn" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Person" Relationship="AgentieImobiliaraModel.FK_Tokens_Person" FromRole="Token" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="UserRol">
+          <Key>
+            <PropertyRef Name="RolId" />
+          </Key>
+          <Property Name="RolId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RolName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Descriere" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Persons" Relationship="AgentieImobiliaraModel.UserInRole" FromRole="UserRol" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="VideoImobil">
+          <Key>
+            <PropertyRef Name="videoID" />
+          </Key>
+          <Property Name="videoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ofertaID" Type="Int32" Nullable="false" />
+          <Property Name="VideoName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="VideoDescription" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Oferta" Relationship="AgentieImobiliaraModel.FK_VideoImobil_Oferta" FromRole="VideoImobil" ToRole="Oferta" />
+        </EntityType>
+        <Association Name="FK_Agenti_Agentie">
+          <End Type="AgentieImobiliaraModel.Agentie" Role="Agentie" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.Agenti" Role="Agenti" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agentie">
+              <PropertyRef Name="agentieId" />
+            </Principal>
+            <Dependent Role="Agenti">
+              <PropertyRef Name="agentieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Agenti_Persons">
+          <End Type="AgentieImobiliaraModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.Agenti" Role="Agenti" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personID" />
+            </Principal>
+            <Dependent Role="Agenti">
+              <PropertyRef Name="persoanaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oferta_Agent">
+          <End Type="AgentieImobiliaraModel.Agenti" Role="Agenti" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.Oferta" Role="Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agenti">
+              <PropertyRef Name="agentID" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="id_agent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oferta_Cartier">
+          <End Type="AgentieImobiliaraModel.Cartier" Role="Cartier" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.Oferta" Role="Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cartier">
+              <PropertyRef Name="id_cartier" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="id_cartier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetaliiImobil_Oferta">
+          <End Type="AgentieImobiliaraModel.Oferta" Role="Oferta" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.DetaliiImobil" Role="DetaliiImobil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oferta">
+              <PropertyRef Name="id_oferta" />
+            </Principal>
+            <Dependent Role="DetaliiImobil">
+              <PropertyRef Name="ofertaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FotoImobil_Oferta">
+          <End Type="AgentieImobiliaraModel.Oferta" Role="Oferta" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.FotoImobil" Role="FotoImobil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oferta">
+              <PropertyRef Name="id_oferta" />
+            </Principal>
+            <Dependent Role="FotoImobil">
+              <PropertyRef Name="ofertaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oferta_Imobil">
+          <End Type="AgentieImobiliaraModel.Imobil" Role="Imobil" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.Oferta" Role="Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Imobil">
+              <PropertyRef Name="id_imobil" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="id_imobil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oferta_Localitate">
+          <End Type="AgentieImobiliaraModel.Localitate" Role="Localitate" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.Oferta" Role="Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localitate">
+              <PropertyRef Name="localitateID" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="id_localitate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VideoImobil_Oferta">
+          <End Type="AgentieImobiliaraModel.Oferta" Role="Oferta" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.VideoImobil" Role="VideoImobil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oferta">
+              <PropertyRef Name="id_oferta" />
+            </Principal>
+            <Dependent Role="VideoImobil">
+              <PropertyRef Name="ofertaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tokens_Person">
+          <End Type="AgentieImobiliaraModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="AgentieImobiliaraModel.Token" Role="Token" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personID" />
+            </Principal>
+            <Dependent Role="Token">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserInRole">
+          <End Type="AgentieImobiliaraModel.Person" Role="Person" Multiplicity="*" />
+          <End Type="AgentieImobiliaraModel.UserRol" Role="UserRol" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AgentieImobiliaraModelStoreContainer" CdmEntityContainer="AgentieImobiliaraEntities">
+          <EntitySetMapping Name="Agentis">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Agenti">
+              <MappingFragment StoreEntitySet="Agenti">
+                <ScalarProperty Name="CNP" ColumnName="CNP" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="data_angaj" ColumnName="data_angaj" />
+                <ScalarProperty Name="link_facebook" ColumnName="link_facebook" />
+                <ScalarProperty Name="descriere_agent" ColumnName="descriere_agent" />
+                <ScalarProperty Name="email_agent" ColumnName="email_agent" />
+                <ScalarProperty Name="telefon_edil" ColumnName="telefon_edil" />
+                <ScalarProperty Name="telefon_agent" ColumnName="telefon_agent" />
+                <ScalarProperty Name="nume_agent" ColumnName="nume_agent" />
+                <ScalarProperty Name="agentieID" ColumnName="agentieID" />
+                <ScalarProperty Name="functieID" ColumnName="functieID" />
+                <ScalarProperty Name="persoanaID" ColumnName="persoanaID" />
+                <ScalarProperty Name="departamentID" ColumnName="departamentID" />
+                <ScalarProperty Name="orasID" ColumnName="orasID" />
+                <ScalarProperty Name="agentID" ColumnName="agentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Agenties">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Agentie">
+              <MappingFragment StoreEntitySet="Agentie">
+                <ScalarProperty Name="descriere" ColumnName="descriere" />
+                <ScalarProperty Name="numeAgentie" ColumnName="numeAgentie" />
+                <ScalarProperty Name="agentieId" ColumnName="agentieId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cartiers">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Cartier">
+              <MappingFragment StoreEntitySet="Cartier">
+                <ScalarProperty Name="zoom" ColumnName="zoom" />
+                <ScalarProperty Name="latitudine_longitudine" ColumnName="latitudine_longitudine" />
+                <ScalarProperty Name="denumire_cartier" ColumnName="denumire_cartier" />
+                <ScalarProperty Name="id_cartier" ColumnName="id_cartier" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cereris">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Cereri">
+              <MappingFragment StoreEntitySet="Cereri">
+                <ScalarProperty Name="zona" ColumnName="zona" />
+                <ScalarProperty Name="nr_camere" ColumnName="nr_camere" />
+                <ScalarProperty Name="id_client" ColumnName="id_client" />
+                <ScalarProperty Name="id_oferta" ColumnName="id_oferta" />
+                <ScalarProperty Name="id_cerere" ColumnName="id_cerere" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetaliiImobils">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.DetaliiImobil">
+              <MappingFragment StoreEntitySet="DetaliiImobil">
+                <ScalarProperty Name="publica" ColumnName="publica" />
+                <ScalarProperty Name="detalii_finale_fr" ColumnName="detalii_finale_fr" />
+                <ScalarProperty Name="detalii_finale_en" ColumnName="detalii_finale_en" />
+                <ScalarProperty Name="detalii_finale_ro" ColumnName="detalii_finale_ro" />
+                <ScalarProperty Name="detalii_suplimentare_fr" ColumnName="detalii_suplimentare_fr" />
+                <ScalarProperty Name="detalii_suplimentare_en" ColumnName="detalii_suplimentare_en" />
+                <ScalarProperty Name="detalii_suplimentare_ro" ColumnName="detalii_suplimentare_ro" />
+                <ScalarProperty Name="ofertaID" ColumnName="ofertaID" />
+                <ScalarProperty Name="detaliiID" ColumnName="detaliiID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FotoImobils">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.FotoImobil">
+              <MappingFragment StoreEntitySet="FotoImobil">
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="ofertaID" ColumnName="ofertaID" />
+                <ScalarProperty Name="DescriereFoto" ColumnName="DescriereFoto" />
+                <ScalarProperty Name="NumeFoto" ColumnName="NumeFoto" />
+                <ScalarProperty Name="fotoID" ColumnName="fotoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Imobils">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Imobil">
+              <MappingFragment StoreEntitySet="Imobil">
+                <ScalarProperty Name="comentariu" ColumnName="comentariu" />
+                <ScalarProperty Name="denumire_imobil" ColumnName="denumire_imobil" />
+                <ScalarProperty Name="id_imobil" ColumnName="id_imobil" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Localitates">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Localitate">
+              <MappingFragment StoreEntitySet="Localitate">
+                <ScalarProperty Name="latitudine" ColumnName="latitudine" />
+                <ScalarProperty Name="longitudine" ColumnName="longitudine" />
+                <ScalarProperty Name="denumire_localitate" ColumnName="denumire_localitate" />
+                <ScalarProperty Name="localitateID" ColumnName="localitateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ofertas">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Oferta">
+              <MappingFragment StoreEntitySet="Oferta">
+                <ScalarProperty Name="longitudine" ColumnName="longitudine" />
+                <ScalarProperty Name="latitudine" ColumnName="latitudine" />
+                <ScalarProperty Name="mobilat" ColumnName="mobilat" />
+                <ScalarProperty Name="usa_intrare" ColumnName="usa_intrare" />
+                <ScalarProperty Name="podele" ColumnName="podele" />
+                <ScalarProperty Name="ferestre" ColumnName="ferestre" />
+                <ScalarProperty Name="stare_interior" ColumnName="stare_interior" />
+                <ScalarProperty Name="internet" ColumnName="internet" />
+                <ScalarProperty Name="climatizare" ColumnName="climatizare" />
+                <ScalarProperty Name="sistem_incalzire" ColumnName="sistem_incalzire" />
+                <ScalarProperty Name="utilitati_gen" ColumnName="utilitati_gen" />
+                <ScalarProperty Name="loc_parcare" ColumnName="loc_parcare" />
+                <ScalarProperty Name="an_constructie" ColumnName="an_constructie" />
+                <ScalarProperty Name="nr_balcoane" ColumnName="nr_balcoane" />
+                <ScalarProperty Name="nr_bai" ColumnName="nr_bai" />
+                <ScalarProperty Name="nr_bucatarii" ColumnName="nr_bucatarii" />
+                <ScalarProperty Name="etaj" ColumnName="etaj" />
+                <ScalarProperty Name="confort" ColumnName="confort" />
+                <ScalarProperty Name="compartimentare" ColumnName="compartimentare" />
+                <ScalarProperty Name="moneda" ColumnName="moneda" />
+                <ScalarProperty Name="pret" ColumnName="pret" />
+                <ScalarProperty Name="suprafata_utila" ColumnName="suprafata_utila" />
+                <ScalarProperty Name="nr_camere" ColumnName="nr_camere" />
+                <ScalarProperty Name="tip_contact" ColumnName="tip_contact" />
+                <ScalarProperty Name="id_imobil" ColumnName="id_imobil" />
+                <ScalarProperty Name="id_agent" ColumnName="id_agent" />
+                <ScalarProperty Name="id_cartier" ColumnName="id_cartier" />
+                <ScalarProperty Name="id_localitate" ColumnName="id_localitate" />
+                <ScalarProperty Name="id_oferta" ColumnName="id_oferta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Persons">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Person">
+              <MappingFragment StoreEntitySet="Persons">
+                <ScalarProperty Name="cnp" ColumnName="cnp" />
+                <ScalarProperty Name="data_nasterii" ColumnName="data_nasterii" />
+                <ScalarProperty Name="varsta" ColumnName="varsta" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="prenume" ColumnName="prenume" />
+                <ScalarProperty Name="nume" ColumnName="nume" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="personID" ColumnName="personID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tokens">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.Token">
+              <MappingFragment StoreEntitySet="Tokens">
+                <ScalarProperty Name="expiresOn" ColumnName="expiresOn" />
+                <ScalarProperty Name="issuedOn" ColumnName="issuedOn" />
+                <ScalarProperty Name="authToken" ColumnName="authToken" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="tokenId" ColumnName="tokenId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRols">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.UserRol">
+              <MappingFragment StoreEntitySet="UserRol">
+                <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+                <ScalarProperty Name="RolName" ColumnName="RolName" />
+                <ScalarProperty Name="RolId" ColumnName="RolId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VideoImobils">
+            <EntityTypeMapping TypeName="AgentieImobiliaraModel.VideoImobil">
+              <MappingFragment StoreEntitySet="VideoImobil">
+                <ScalarProperty Name="VideoDescription" ColumnName="VideoDescription" />
+                <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+                <ScalarProperty Name="ofertaID" ColumnName="ofertaID" />
+                <ScalarProperty Name="videoID" ColumnName="videoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="UserInRole" TypeName="AgentieImobiliaraModel.UserInRole" StoreEntitySet="UserInRole">
+            <EndProperty Name="UserRol">
+              <ScalarProperty Name="RolId" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="Person">
+              <ScalarProperty Name="personID" ColumnName="PersonId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
