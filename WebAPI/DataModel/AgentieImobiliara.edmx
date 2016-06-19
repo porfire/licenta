@@ -74,7 +74,7 @@
           <Property Name="NumeFoto" Type="nvarchar" MaxLength="256" />
           <Property Name="DescriereFoto" Type="nvarchar" MaxLength="256" />
           <Property Name="ofertaID" Type="int" Nullable="false" />
-          <Property Name="img" Type="varbinary(max)" />
+          <Property Name="img_path" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Imobil">
           <Key>
@@ -126,6 +126,7 @@
           <Property Name="mobilat" Type="varchar(max)" Nullable="false" />
           <Property Name="latitudine" Type="float" />
           <Property Name="longitudine" Type="float" />
+          <Property Name="tip_oferta" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Persons">
           <Key>
@@ -175,8 +176,8 @@
           </Key>
           <Property Name="videoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ofertaID" Type="int" Nullable="false" />
-          <Property Name="VideoName" Type="nvarchar" MaxLength="256" Nullable="false" />
-          <Property Name="VideoDescription" Type="nvarchar" MaxLength="256" />
+          <Property Name="video_path" Type="nvarchar(max)" />
+          <Property Name="videoDescription" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_Agenti_Agentie">
           <End Role="Agentie" Type="Self.Agentie" Multiplicity="1" />
@@ -524,7 +525,7 @@
           <Property Name="NumeFoto" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="DescriereFoto" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="ofertaID" Type="Int32" Nullable="false" />
-          <Property Name="img" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="img_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Oferta" Relationship="AgentieImobiliaraModel.FK_FotoImobil_Oferta" FromRole="FotoImobil" ToRole="Oferta" />
         </EntityType>
         <EntityType Name="Imobil">
@@ -579,6 +580,7 @@
           <Property Name="mobilat" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="latitudine" Type="Double" />
           <Property Name="longitudine" Type="Double" />
+          <Property Name="tip_oferta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Agenti" Relationship="AgentieImobiliaraModel.FK_Oferta_Agent" FromRole="Oferta" ToRole="Agenti" />
           <NavigationProperty Name="Cartier" Relationship="AgentieImobiliaraModel.FK_Oferta_Cartier" FromRole="Oferta" ToRole="Cartier" />
           <NavigationProperty Name="DetaliiImobils" Relationship="AgentieImobiliaraModel.FK_DetaliiImobil_Oferta" FromRole="Oferta" ToRole="DetaliiImobil" />
@@ -632,8 +634,8 @@
           </Key>
           <Property Name="videoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ofertaID" Type="Int32" Nullable="false" />
-          <Property Name="VideoName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
-          <Property Name="VideoDescription" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="video_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="videoDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Oferta" Relationship="AgentieImobiliaraModel.FK_VideoImobil_Oferta" FromRole="VideoImobil" ToRole="Oferta" />
         </EntityType>
         <Association Name="FK_Agenti_Agentie">
@@ -835,7 +837,7 @@
           <EntitySetMapping Name="FotoImobils">
             <EntityTypeMapping TypeName="AgentieImobiliaraModel.FotoImobil">
               <MappingFragment StoreEntitySet="FotoImobil">
-                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="img_path" ColumnName="img_path" />
                 <ScalarProperty Name="ofertaID" ColumnName="ofertaID" />
                 <ScalarProperty Name="DescriereFoto" ColumnName="DescriereFoto" />
                 <ScalarProperty Name="NumeFoto" ColumnName="NumeFoto" />
@@ -865,6 +867,7 @@
           <EntitySetMapping Name="Ofertas">
             <EntityTypeMapping TypeName="AgentieImobiliaraModel.Oferta">
               <MappingFragment StoreEntitySet="Oferta">
+                <ScalarProperty Name="tip_oferta" ColumnName="tip_oferta" />
                 <ScalarProperty Name="longitudine" ColumnName="longitudine" />
                 <ScalarProperty Name="latitudine" ColumnName="latitudine" />
                 <ScalarProperty Name="mobilat" ColumnName="mobilat" />
@@ -937,8 +940,8 @@
           <EntitySetMapping Name="VideoImobils">
             <EntityTypeMapping TypeName="AgentieImobiliaraModel.VideoImobil">
               <MappingFragment StoreEntitySet="VideoImobil">
-                <ScalarProperty Name="VideoDescription" ColumnName="VideoDescription" />
-                <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+                <ScalarProperty Name="videoDescription" ColumnName="videoDescription" />
+                <ScalarProperty Name="video_path" ColumnName="video_path" />
                 <ScalarProperty Name="ofertaID" ColumnName="ofertaID" />
                 <ScalarProperty Name="videoID" ColumnName="videoID" />
               </MappingFragment>

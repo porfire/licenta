@@ -69,6 +69,7 @@ namespace BusinessServices.Services
             oferta.utilitati_gen = ofertaEntity.utilitati_gen;
             oferta.latitudine = ofertaEntity.latitudine;
             oferta.longitudine = ofertaEntity.longitudine;
+            oferta.tip_oferta = ofertaEntity.tip_oferta;
 
             _UnitOfWork.OfertaRepository.Insert(oferta);
             _UnitOfWork.Save();

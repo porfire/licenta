@@ -5,6 +5,7 @@ using BusinessEntities.Entities;
 using BusinessServices.Interfaces;
 using DataModel;
 using DataModel.UnitOfWork;
+using System.IO;
 
 namespace BusinessServices.Services
 {
@@ -47,6 +48,7 @@ namespace BusinessServices.Services
             {
                 fotoImobil.NumeFoto = fotoImobilEntity.NumeFoto;
                 fotoImobil.DescriereFoto = fotoImobilEntity.DescriereFoto;
+              
             }
             _UnitOfWork.FotoImobilRepository.Insert(fotoImobil);
             _UnitOfWork.Save();
@@ -88,6 +90,25 @@ namespace BusinessServices.Services
                 }
             }
             return success;
+        }
+        public byte[] GetFile(string storagePath)  //asta o sa iti returneze un byte array dintr-run path care il dai 
+        {
+            FileStream fileStream = null;
+
+            try
+            {
+                //fileStream = new FileStream(storagePath, FileMode.Open, FileAccess.Read, FileShare.Read, BufferSize, true);
+                var file = new byte[fileStream.Length];
+                fileStream.Read(file, 0, (int)fileStream.Length);
+                return file;
+            }
+            finally
+            {
+                if (fileStream != null)
+                {
+                    fileStream.Close();
+                }
+            }
         }
     }
 }

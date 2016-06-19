@@ -36,6 +36,7 @@ namespace BusinessEntities.Entities
         public string podele { get; set; }
         public string usa_intrare { get; set; }
         public string mobilat { get; set; }
+        public string tip_oferta { get; set; }
         public Nullable<double> latitudine { get; set; }
         public Nullable<double> longitudine { get; set; }
        

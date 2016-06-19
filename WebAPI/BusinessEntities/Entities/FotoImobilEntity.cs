@@ -10,7 +10,8 @@ namespace BusinessEntities.Entities
         public string NumeFoto { get; set; }
         public string DescriereFoto { get; set; }
         public int ofertaID { get; set; }
-        public byte[] img { get; set; }
+        public string img_path { get; set; }
+
 
         public virtual Oferta Oferta { get; set; }
    }

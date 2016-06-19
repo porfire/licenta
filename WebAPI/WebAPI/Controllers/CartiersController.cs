@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
         }
 
         //// GET: api/Cartiers/5
-        public HttpResponseMessage GetGetCartier(int id)
+        public HttpResponseMessage GetCartier(int id)
         {
             var cartier = _cartierService.GetCartierById(id);
             if (cartier != null)

@@ -7,16 +7,16 @@
       <Diagram DiagramId="950319af71ce4eb98be9fdb50cc5a6ba" Name="Diagram1">
         <EntityTypeShape EntityType="AgentieImobiliaraModel.Agenti" Width="1.5" PointX="6" PointY="6.375" />
         <EntityTypeShape EntityType="AgentieImobiliaraModel.Agentie" Width="1.5" PointX="3.75" PointY="9.625" />
-        <EntityTypeShape EntityType="AgentieImobiliaraModel.Cartier" Width="1.5" PointX="6" PointY="2.875" />
+        <EntityTypeShape EntityType="AgentieImobiliaraModel.Cartier" Width="1.5" PointX="6" PointY="15.25" />
         <EntityTypeShape EntityType="AgentieImobiliaraModel.Cereri" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="AgentieImobiliaraModel.DetaliiImobil" Width="1.5" PointX="10.5" PointY="7" />
-        <EntityTypeShape EntityType="AgentieImobiliaraModel.FotoImobil" Width="1.5" PointX="10.5" PointY="10.625" />
-        <EntityTypeShape EntityType="AgentieImobiliaraModel.Imobil" Width="1.5" PointX="6" PointY="11.625" />
-        <EntityTypeShape EntityType="AgentieImobiliaraModel.Localitate" Width="1.5" PointX="6" PointY="14.25" />
-        <EntityTypeShape EntityType="AgentieImobiliaraModel.Oferta" Width="1.5" PointX="8.25" PointY="4.625" />
+        <EntityTypeShape EntityType="AgentieImobiliaraModel.DetaliiImobil" Width="1.5" PointX="10.5" PointY="9.875" />
+        <EntityTypeShape EntityType="AgentieImobiliaraModel.FotoImobil" Width="1.5" PointX="10.5" PointY="7" />
+        <EntityTypeShape EntityType="AgentieImobiliaraModel.Imobil" Width="1.5" PointX="6" PointY="2.875" />
+        <EntityTypeShape EntityType="AgentieImobiliaraModel.Localitate" Width="1.5" PointX="6" PointY="12.5" />
+        <EntityTypeShape EntityType="AgentieImobiliaraModel.Oferta" Width="1.5" PointX="8.25" PointY="4.5" />
         <EntityTypeShape EntityType="AgentieImobiliaraModel.Person" Width="1.5" PointX="0.75" PointY="6.75" />
-        <EntityTypeShape EntityType="AgentieImobiliaraModel.Token" Width="1.5" PointX="3" PointY="14" />
-        <EntityTypeShape EntityType="AgentieImobiliaraModel.UserRol" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="AgentieImobiliaraModel.Token" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="AgentieImobiliaraModel.UserRol" Width="1.5" PointX="3" PointY="14.375" />
         <EntityTypeShape EntityType="AgentieImobiliaraModel.VideoImobil" Width="1.5" PointX="10.5" PointY="4.25" />
         <AssociationConnector Association="AgentieImobiliaraModel.FK_Agenti_Agentie" />
         <AssociationConnector Association="AgentieImobiliaraModel.FK_Agenti_Persons" />

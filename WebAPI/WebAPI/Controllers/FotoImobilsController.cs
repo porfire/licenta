@@ -15,6 +15,7 @@ using System.Net.Http.Headers;
 using System;
 using System.Web.Hosting;
 using System.Threading.Tasks;
+using System.Web.Http.Description;
 
 namespace WebAPI.Controllers
 {
@@ -26,17 +27,53 @@ namespace WebAPI.Controllers
         {
             _fotoImobilService = new FotoImobilServce();
         }
-
-        public static ImageFormat GetImageFormat(string extension)
+        private static ImageFormat GetImageFormat(string fileName)
         {
-            ImageFormat result = null;
-            PropertyInfo prop = typeof(ImageFormat).GetProperties().Where(p => p.Name.Equals(extension, StringComparison.InvariantCultureIgnoreCase)).FirstOrDefault();
-            if (prop != null)
+            string extension = Path.GetExtension(fileName);
+            if (string.IsNullOrEmpty(extension))
+                throw new ArgumentException(
+                    string.Format("Unable to determine file extension for fileName: {0}", fileName));
+
+            switch (extension.ToLower())
             {
-                result = prop.GetValue(prop) as ImageFormat;
+                case @".bmp":
+                    return ImageFormat.Bmp;
+
+                case @".gif":
+                    return ImageFormat.Gif;
+
+                case @".ico":
+                    return ImageFormat.Icon;
+
+                case @".jpg":
+                case @".jpeg":
+                    return ImageFormat.Jpeg;
+
+                case @".png":
+                    return ImageFormat.Png;
+
+                case @".tif":
+                case @".tiff":
+                    return ImageFormat.Tiff;
+
+                case @".wmf":
+                    return ImageFormat.Wmf;
+
+                default:
+                    throw new NotImplementedException();
             }
-            return result;
         }
+
+        //public static ImageFormat GetImageFormat(string extension)
+        //{
+        //    ImageFormat result = null;
+        //    PropertyInfo prop = typeof(ImageFormat).GetProperties().Where(p => p.Name.Equals(extension, StringComparison.InvariantCultureIgnoreCase)).FirstOrDefault();
+        //    if (prop != null)
+        //    {
+        //        result = prop.GetValue(prop) as ImageFormat;
+        //    }
+        //    return result;
+        //}
         private MemoryStream CopyFileToMemory(string path)
         {
             MemoryStream ms = new MemoryStream();
@@ -48,13 +85,12 @@ namespace WebAPI.Controllers
             return ms;
         }
 
-        [HttpGet]
-        public HttpResponseMessage Get(string id)
+        public HttpResponseMessage Geti(string id)
         {
             MemoryStream ms = new MemoryStream();
             HttpContext context = HttpContext.Current;
             //Limit access only to images folder at root level  
-            string filePath = context.Server.MapPath(string.Concat("/content/images/", id));
+            string filePath = context.Server.MapPath(string.Concat("images/", id));
             string extension = Path.GetExtension(id);
             if (File.Exists(filePath))
             {
@@ -81,7 +117,7 @@ namespace WebAPI.Controllers
 
             HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);
             result.Content = new ByteArrayContent(ms.ToArray());
-            result.Content.Headers.ContentType = new MediaTypeHeaderValue(string.Format("image/{0}", extension));
+            result.Content.Headers.ContentType = new MediaTypeHeaderValue(string.Format("images/{0}", extension));
             return result;
         }
 
@@ -99,19 +135,53 @@ namespace WebAPI.Controllers
         }
 
         //// GET: api/fotoImobils/5
-        public HttpResponseMessage GetGetfotoImobil(int id)
+        public HttpResponseMessage GetfotoImobil(int id)
         {
             var fotoImobil = _fotoImobilService.GetFotoImobilById(id);
+            //var img_path = HttpContext.Current.Server.MapPath(string.Concat("images/{0}", id));
+            //var imageByteArray = GetFile(img_path);
             if (fotoImobil != null)
                 return Request.CreateResponse(HttpStatusCode.OK, fotoImobil);
             return Request.CreateErrorResponse(HttpStatusCode.NotFound, "No product found for this id");
         }
+        // [ResponseType(typeof(OfertaEntity))]
+        //public IHttpActionResult Post([FromBody] AgentiEntity agentiEntity)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+        //    _agentService.CreateAgent(agentiEntity);
+        //    HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, agentiEntity);
 
+        //    response.Headers.Location = new Uri(Url.Link("DefaultApi", new {id = agentiEntity.agentID}));
+        //    return StatusCode(HttpStatusCode.Conflict);
+
+        //}
         // POST api/fotoImobils
-        public int Post([FromBody] FotoImobilEntity fotoImobilEntity)
+        [ResponseType(typeof(OfertaEntity))]
+        public IHttpActionResult Post([FromBody] FotoImobilEntity fotoImobilEntity)
         {
-            return _fotoImobilService.CreateFotoImobil(fotoImobilEntity);
+            HttpContext context = HttpContext.Current;
+            //string filePath = context.Server.MapPath(string.Concat("images/", fotoImobilEntity.fotoID));
+            //string extension = Path.GetExtension("images/id");
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var img_path = HttpContext.Current.Server.MapPath(string.Concat("images/{0}", fotoImobilEntity.NumeFoto));
+            var imageByteArray = GetFile(img_path);
+
+            fotoImobilEntity.img_path = "/images/" + fotoImobilEntity.NumeFoto + "getformat foto";
+            //Copy to memory
+            _fotoImobilService.CreateFotoImobil(fotoImobilEntity);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, fotoImobilEntity);
+
+            response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = fotoImobilEntity.fotoID }));
+            return StatusCode(HttpStatusCode.Conflict);
         }
+
+
 
         // PUT api/fotoImobils/5
         public bool Put(int id, [FromBody] FotoImobilEntity fotoImobilEntity)
@@ -150,7 +220,7 @@ namespace WebAPI.Controllers
         // DELETE api/People/5
         public void Delete(int id)
         {
-            String filePath = HostingEnvironment.MapPath("~/Images/HT.jpg");
+            String filePath = HostingEnvironment.MapPath("~/images/HT.jpg");
             File.Delete(filePath);
         }
 
@@ -180,7 +250,7 @@ namespace WebAPI.Controllers
                 throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
             }
 
-            string root = HttpContext.Current.Server.MapPath("~/Images");
+            string root = HttpContext.Current.Server.MapPath("~/images");
             var provider = new MultipartFormDataStreamProvider(root);
 
             var task = Request.Content.ReadAsMultipartAsync(provider).
@@ -201,6 +271,54 @@ namespace WebAPI.Controllers
 
             return task;
         }
+
+        [HttpPost]
+        public HttpResponseMessage Index(HttpPostedFileBase file)
+        {
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(HttpContext.Current.Server.MapPath("~/Images"),
+                                               Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+                    return Request.CreateResponse(HttpStatusCode.Accepted, "File uploaded successfully");
+
+                }
+                catch (Exception ex)
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.NotFound, "File  NOT uploaded successfully");
+                }
+            else
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.Accepted, "You have not specified a file.");
+            }
+           // return View();
+        }
+
+        public byte[] GetFile(string storagePath)  //asta o sa iti returneze un byte array dintr-run path care il dai 
+        {
+            FileStream fileStream = null;
+
+            try
+            {
+                int BufferSize = 1;
+                fileStream = new FileStream(storagePath, FileMode.Open, FileAccess.Read, FileShare.Read, BufferSize, true);
+                var file = new byte[fileStream.Length];
+                fileStream.Read(file, 0, (int)fileStream.Length);
+                return file;
+            }
+            finally
+            {
+                if (fileStream != null)
+                {
+                    fileStream.Close();
+                }
+            }
+        }
+
+        //FotoImobilEntity imagePath =HttpContext.Current.Server.MapPath(string.Format("Images/{0}",photo.imageName));  // photo o sa iti fie direct obiect din db
+        //ImagesOfertaEntity imageByteArray =GetFile(imagePath); // asta iti va returna un byte array cu poza care il transmiti ca si response
+
         public HttpResponseMessage Post2()
         {
             var result = new HttpResponseMessage(HttpStatusCode.OK);
@@ -214,7 +332,7 @@ namespace WebAPI.Controllers
                         Stream stream = content.ReadAsStreamAsync().Result;
                         Image image = Image.FromStream(stream);
                         var testName = content.Headers.ContentDisposition.Name;
-                        String filePath = HostingEnvironment.MapPath("~/Images/");
+                        String filePath = HostingEnvironment.MapPath("~/images/");
                         String[] headerValues = (String[])Request.Headers.GetValues("UniqueId");
                         String fileName = headerValues[0] + ".jpg";
                         String fullPath = Path.Combine(filePath, fileName);

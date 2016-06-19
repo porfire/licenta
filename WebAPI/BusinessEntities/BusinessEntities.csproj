@@ -69,6 +69,7 @@
     <Compile Include="Entities\CartierEntity.cs" />
     <Compile Include="Entities\DetaliiImobilEntity.cs" />
     <Compile Include="Entities\FotoImobilEntity.cs" />
+    <Compile Include="Entities\ImagesOfertaEntity.cs" />
     <Compile Include="Entities\ImobilEntity.cs" />
     <Compile Include="Entities\LocalitateEntity.cs" />
     <Compile Include="Entities\OfertaEntity.cs" />

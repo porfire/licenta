@@ -51,6 +51,7 @@ namespace DataModel
         public string mobilat { get; set; }
         public Nullable<double> latitudine { get; set; }
         public Nullable<double> longitudine { get; set; }
+        public string tip_oferta { get; set; }
     
         public virtual Agenti Agenti { get; set; }
         public virtual Cartier Cartier { get; set; }

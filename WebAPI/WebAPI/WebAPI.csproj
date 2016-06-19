@@ -303,6 +303,7 @@
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="images\house1.jpg" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.9.2.js" />
@@ -364,6 +365,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OfertasController.cs" />
     <Compile Include="Controllers\PeopleController.cs" />
+    <Compile Include="Controllers\UploadingController.cs" />
     <Compile Include="Controllers\UserRolsController.cs" />
     <Compile Include="Controllers\VideoImobilsController.cs" />
     <Compile Include="DAL\Interfaces\IGenricRepository.cs" />
@@ -446,7 +448,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59884</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://192.168.0.39:58938</IISUrl>
+          <IISUrl>http://192.168.0.103:58938</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

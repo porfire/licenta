@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,17 +6,10 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using System.Web.Http.Results;
 using System.Web.Mvc;
-using System.Web.Security;
-using System.Web.Services.Description;
-using System.Web.UI.WebControls.WebParts;
-using AttributeRouting.Web.Http;
 using BusinessEntities.Entities;
 using BusinessServices.Interfaces;
 using BusinessServices.Services;
-using Microsoft.AspNet.Identity;
-using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {

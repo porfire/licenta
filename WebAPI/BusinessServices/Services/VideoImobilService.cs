@@ -46,8 +46,8 @@ namespace BusinessServices.Services
             var videoImobil = new VideoImobil();
             {
 
-                videoImobil.VideoName = videoImobilEntity.VideoName;
-                videoImobil.VideoDescription = videoImobilEntity.VideoDescription;
+                videoImobil.video_path = videoImobilEntity.video_path;
+                videoImobil.videoDescription = videoImobilEntity.videoDescription;
             }
             _UnitOfWork.VideoImobilRepository.Insert(videoImobil);
             _UnitOfWork.Save();
@@ -63,8 +63,8 @@ namespace BusinessServices.Services
 
                 if (videoImobil != null)
                 {
-                    videoImobil.VideoName = videoImobilEntity.VideoName;
-                    videoImobil.VideoDescription = videoImobilEntity.VideoDescription;
+                    videoImobil.video_path = videoImobilEntity.video_path;
+                    videoImobil.videoDescription = videoImobilEntity.videoDescription;
                     _UnitOfWork.VideoImobilRepository.Update(videoImobil);
                     _UnitOfWork.Save();
                     success = true;
