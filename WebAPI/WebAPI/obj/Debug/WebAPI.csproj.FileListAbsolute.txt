@@ -1,0 +1,215 @@
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\WebAPI.dll.config
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\WebAPI.dll
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\WebAPI.pdb
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\EntityFramework.dll
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\EntityFramework.SqlServer.dll
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\Newtonsoft.Json.dll
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\System.Net.Http.Formatting.dll
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\System.Web.Http.dll
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\System.Web.Http.WebHost.dll
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\EntityFramework.xml
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\EntityFramework.SqlServer.xml
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\Newtonsoft.Json.xml
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\System.Net.Http.Formatting.xml
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\System.Web.Http.xml
+D:\Webserver\Sandbox\Dot Net\WebAPI\bin\System.Web.Http.WebHost.xml
+D:\Webserver\Sandbox\Dot Net\WebAPI\obj\Debug\WebAPI.dll
+D:\Webserver\Sandbox\Dot Net\WebAPI\obj\Debug\WebAPI.pdb
+D:\Webserver\Sandbox\Dot Net\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\WebAPI.dll.config
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\WebAPI.dll
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\WebAPI.pdb
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\EntityFramework.dll
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\Newtonsoft.Json.dll
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\System.Web.Http.dll
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\EntityFramework.xml
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\Newtonsoft.Json.xml
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\System.Web.Http.xml
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\obj\Debug\WebAPI.dll
+C:\Users\Iulia\Desktop\WebAPI (1)\WebAPI\obj\Debug\WebAPI.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\WebAPI.dll.config
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\WebAPI.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\WebAPI.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\EntityFramework.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\Newtonsoft.Json.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\System.Web.Http.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\EntityFramework.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\Newtonsoft.Json.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\System.Web.Http.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\obj\Debug\WebAPI.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI (1)\WebAPI\obj\Debug\WebAPI.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\WebAPI.dll.config
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\WebAPI.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\WebAPI.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Antlr3.Runtime.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\AttributeRouting.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\AttributeRouting.Web.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\AttributeRouting.Web.Http.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Autofac.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Autofac.Integration.Mvc.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\BusinessEntities.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\BusinessServices.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\DataModel.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\EntityFramework.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.Tracking.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Newtonsoft.Json.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Resolver.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\SendGrid.SmtpApi.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Helpers.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Http.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Mvc.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Optimization.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Razor.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Web.Optimization.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\WebActivator.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\WebActivatorEx.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\WebAPIObjects.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\WebGrease.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\AutoMapper.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\BusinessEntities.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\BusinessServices.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\DataModel.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Resolver.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Antlr3.Runtime.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\AttributeRouting.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\AttributeRouting.Web.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\AttributeRouting.Web.Http.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Autofac.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Autofac.Integration.Mvc.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\EntityFramework.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\Newtonsoft.Json.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Helpers.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Http.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Mvc.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Optimization.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.Razor.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\WebActivator.pdb
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\bin\AutoMapper.xml
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\obj\Debug\WebAPI.dll
+C:\Users\Iulia\Desktop\licenta\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.App.config
+D:\proiecte_git\licenta\WebAPI\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\WebAPI.dll.config
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\WebAPI.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\WebAPI.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Antlr3.Runtime.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\AttributeRouting.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\AttributeRouting.Web.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\AttributeRouting.Web.Http.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Autofac.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Autofac.Integration.Mvc.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\BusinessEntities.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\BusinessServices.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\CloudinaryDotNet.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\DataModel.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\EntityFramework.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\EntityFramework.SqlServer.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\FireSharp.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.AspNet.Identity.Core.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.ServiceLocation.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.Tracking.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Threading.Tasks.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Newtonsoft.Json.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Resolver.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\SendGrid.SmtpApi.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Net.Http.Extensions.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Net.Http.Formatting.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Net.Http.Primitives.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Helpers.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Http.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Http.WebHost.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Mvc.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Optimization.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Razor.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.Deployment.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.Razor.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Web.Optimization.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\WebActivator.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\WebActivatorEx.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\WebAPIObjects.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\WebGrease.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\AutoMapper.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\BusinessEntities.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\BusinessServices.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\DataModel.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Resolver.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Antlr3.Runtime.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\AttributeRouting.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\AttributeRouting.Web.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\AttributeRouting.Web.Http.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Autofac.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Autofac.Integration.Mvc.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\EntityFramework.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\EntityFramework.SqlServer.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.AspNet.Identity.Core.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.ServiceLocation.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Threading.Tasks.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\Newtonsoft.Json.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Net.Http.Extensions.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Net.Http.Formatting.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Net.Http.Primitives.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Helpers.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Http.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Http.WebHost.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Mvc.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Optimization.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.Razor.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.Deployment.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\System.Web.WebPages.Razor.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\WebActivator.pdb
+D:\proiecte_git\licenta\WebAPI\WebAPI\bin\AutoMapper.xml
+D:\proiecte_git\licenta\WebAPI\WebAPI\obj\Debug\WebAPI.dll
+D:\proiecte_git\licenta\WebAPI\WebAPI\obj\Debug\WebAPI.pdb

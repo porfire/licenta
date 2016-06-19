@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgentieImobiliaraModelStoreContainer" CdmEntityContainer="AgentieImobiliaraEntities">
+    <EntitySetMapping Name="Agentis">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.Agenti">
+        <MappingFragment StoreEntitySet="Agenti">
+          <ScalarProperty Name="link_facebook" ColumnName="link_facebook" />
+          <ScalarProperty Name="descriere_agent" ColumnName="descriere_agent" />
+          <ScalarProperty Name="email_agent" ColumnName="email_agent" />
+          <ScalarProperty Name="telefon_edil" ColumnName="telefon_edil" />
+          <ScalarProperty Name="telefon_agent" ColumnName="telefon_agent" />
+          <ScalarProperty Name="nume_agent" ColumnName="nume_agent" />
+          <ScalarProperty Name="agentieID" ColumnName="agentieID" />
+          <ScalarProperty Name="functieID" ColumnName="functieID" />
+          <ScalarProperty Name="persoanaID" ColumnName="persoanaID" />
+          <ScalarProperty Name="departamentID" ColumnName="departamentID" />
+          <ScalarProperty Name="orasID" ColumnName="orasID" />
+          <ScalarProperty Name="agentID" ColumnName="agentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Agenties">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.Agentie">
+        <MappingFragment StoreEntitySet="Agentie">
+          <ScalarProperty Name="descriere" ColumnName="descriere" />
+          <ScalarProperty Name="numeAgentie" ColumnName="numeAgentie" />
+          <ScalarProperty Name="agentieId" ColumnName="agentieId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cartiers">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.Cartier">
+        <MappingFragment StoreEntitySet="Cartier">
+          <ScalarProperty Name="zoom" ColumnName="zoom" />
+          <ScalarProperty Name="latitudine_longitudine" ColumnName="latitudine_longitudine" />
+          <ScalarProperty Name="denumire_cartier" ColumnName="denumire_cartier" />
+          <ScalarProperty Name="id_cartier" ColumnName="id_cartier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetaliiImobils">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.DetaliiImobil">
+        <MappingFragment StoreEntitySet="DetaliiImobil">
+          <ScalarProperty Name="publica" ColumnName="publica" />
+          <ScalarProperty Name="detalii_finale_fr" ColumnName="detalii_finale_fr" />
+          <ScalarProperty Name="detalii_finale_en" ColumnName="detalii_finale_en" />
+          <ScalarProperty Name="detalii_finale_ro" ColumnName="detalii_finale_ro" />
+          <ScalarProperty Name="detalii_suplimentare_fr" ColumnName="detalii_suplimentare_fr" />
+          <ScalarProperty Name="detalii_suplimentare_en" ColumnName="detalii_suplimentare_en" />
+          <ScalarProperty Name="detalii_suplimentare_ro" ColumnName="detalii_suplimentare_ro" />
+          <ScalarProperty Name="ofertaID" ColumnName="ofertaID" />
+          <ScalarProperty Name="detaliiID" ColumnName="detaliiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FotoImobils">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.FotoImobil">
+        <MappingFragment StoreEntitySet="FotoImobil">
+          <ScalarProperty Name="ofertaID" ColumnName="ofertaID" />
+          <ScalarProperty Name="DescriereFoto" ColumnName="DescriereFoto" />
+          <ScalarProperty Name="NumeFoto" ColumnName="NumeFoto" />
+          <ScalarProperty Name="fotoID" ColumnName="fotoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Imobils">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.Imobil">
+        <MappingFragment StoreEntitySet="Imobil">
+          <ScalarProperty Name="comentariu" ColumnName="comentariu" />
+          <ScalarProperty Name="denumire_imobil" ColumnName="denumire_imobil" />
+          <ScalarProperty Name="id_imobil" ColumnName="id_imobil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localitates">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.Localitate">
+        <MappingFragment StoreEntitySet="Localitate">
+          <ScalarProperty Name="latitudine" ColumnName="latitudine" />
+          <ScalarProperty Name="longitudine" ColumnName="longitudine" />
+          <ScalarProperty Name="denumire_localitate" ColumnName="denumire_localitate" />
+          <ScalarProperty Name="localitateID" ColumnName="localitateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ofertas">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.Oferta">
+        <MappingFragment StoreEntitySet="Oferta">
+          <ScalarProperty Name="mobilat" ColumnName="mobilat" />
+          <ScalarProperty Name="usa_intrare" ColumnName="usa_intrare" />
+          <ScalarProperty Name="podele" ColumnName="podele" />
+          <ScalarProperty Name="ferestre" ColumnName="ferestre" />
+          <ScalarProperty Name="stare_interior" ColumnName="stare_interior" />
+          <ScalarProperty Name="internet" ColumnName="internet" />
+          <ScalarProperty Name="climatizare" ColumnName="climatizare" />
+          <ScalarProperty Name="sistem_incalzire" ColumnName="sistem_incalzire" />
+          <ScalarProperty Name="utilitati_gen" ColumnName="utilitati_gen" />
+          <ScalarProperty Name="loc_parcare" ColumnName="loc_parcare" />
+          <ScalarProperty Name="an_constructie" ColumnName="an_constructie" />
+          <ScalarProperty Name="nr_balcoane" ColumnName="nr_balcoane" />
+          <ScalarProperty Name="nr_bai" ColumnName="nr_bai" />
+          <ScalarProperty Name="nr_bucatarii" ColumnName="nr_bucatarii" />
+          <ScalarProperty Name="etaj" ColumnName="etaj" />
+          <ScalarProperty Name="confort" ColumnName="confort" />
+          <ScalarProperty Name="compartimentare" ColumnName="compartimentare" />
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="pret" ColumnName="pret" />
+          <ScalarProperty Name="suprafata_utila" ColumnName="suprafata_utila" />
+          <ScalarProperty Name="nr_camere" ColumnName="nr_camere" />
+          <ScalarProperty Name="tip_contact" ColumnName="tip_contact" />
+          <ScalarProperty Name="id_imobil" ColumnName="id_imobil" />
+          <ScalarProperty Name="id_agent" ColumnName="id_agent" />
+          <ScalarProperty Name="id_cartier" ColumnName="id_cartier" />
+          <ScalarProperty Name="id_localitate" ColumnName="id_localitate" />
+          <ScalarProperty Name="id_oferta" ColumnName="id_oferta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.Person">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="varsta" ColumnName="varsta" />
+          <ScalarProperty Name="adresa" ColumnName="adresa" />
+          <ScalarProperty Name="prenume" ColumnName="prenume" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="personID" ColumnName="personID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRols">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.UserRol">
+        <MappingFragment StoreEntitySet="UserRol">
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="RolName" ColumnName="RolName" />
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VideoImobils">
+      <EntityTypeMapping TypeName="AgentieImobiliaraModel.VideoImobil">
+        <MappingFragment StoreEntitySet="VideoImobil">
+          <ScalarProperty Name="VideoDescription" ColumnName="VideoDescription" />
+          <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+          <ScalarProperty Name="ofertaID" ColumnName="ofertaID" />
+          <ScalarProperty Name="videoID" ColumnName="videoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserInRole" TypeName="AgentieImobiliaraModel.UserInRole" StoreEntitySet="UserInRole">
+      <EndProperty Name="UserRol">
+        <ScalarProperty Name="RolId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="personID" ColumnName="PersonId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
